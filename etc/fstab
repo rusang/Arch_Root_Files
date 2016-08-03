@@ -1,0 +1,24 @@
+# 
+# /etc/fstab: static file system information
+#
+# <file system>	<dir>	<type>	<options>	<dump>	<pass>
+# UUID=89957643-1c5f-4cf9-bbd5-ab3db00120b4
+/dev/sda7           	/         	ext4      	rw,relatime,data=ordered	0 1
+
+# UUID=829eea6f-2644-4ca1-bb93-12459e5f104f
+/dev/sda5           	/boot     	ext4      	rw,relatime,data=ordered	0 2
+
+# UUID=5ac1eeb9-acdf-4176-8b92-1dd888eae7da
+/dev/sda8          	/home     	ext4      	rw,relatime,data=ordered	0 2
+
+# UUID=8122d31a-7831-4d13-b354-1f24b455fea8
+/dev/sda6           	none      	swap      	defaults  	0 0
+#/dev/sda1 /mnt/c vfat user,rw,iocharset=utf8,umask=000 0 0
+/dev/sdb4  /mnt/e ntfs user,rw,umask=000 0 0
+/dev/sdb3 /mnt/d ntfs user,rw,umask=000 0 0
+#ubuntu partition
+# /dev/sda3 /mnt/Ubuntu/root  ext4  rw 0 0  #最好不好mount root ，容易破坏根目录
+/dev/sda4 /mnt/Ubuntu/home  ext4  rw 0 0
+#/dev/sda5 /mnt/f ntfs user,rw,umask=000 0 0
+#/nfs_root	     /home/ssliao/work/nfs_root/first_fs    none   0   0
+ tmpfs   /var/lib/mysqltmp   tmpfs   rw,gid=89,uid=89,size=100M,mode=0750,noatime   0 0
